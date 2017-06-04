@@ -26,12 +26,28 @@ public class Marks extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 
+		if(request.getParameter("changeMark") != null) {
+			changeMark();
+			System.out.println("Oceny zmieniono");
+		}
+		
 		Cookie userCookie2 = new Cookie("PHPSESSID", "test");
 		userCookie2.setMaxAge(60*60*24*365); //Store cookie for 1 year
 		response.addCookie(userCookie2);
 		
+		request.setAttribute("mark", changedMark);
 		getServletContext().getRequestDispatcher("/marks.jsp").forward(request, response);
 
+	}
+	
+	protected String changedMark = "2";
+	
+	protected void changeMark() {
+		if(changedMark == "2") {
+			changedMark = "3";
+		} else {
+			changedMark = "2";
+		}
 	}
 
 }

@@ -196,7 +196,7 @@
                                                                                     <a href='https://usosweb.tu.kielce.pl/kontroler.php?_action=katalog2/przedmioty/pokazGrupyZajec&zaj_cyk_id=25254' onclick='return Common.confirmWarnings();'  class='wrhidden'  class='wrhidden' >Ćwiczenia</a>:
                                                                                                                             <span style='
                                                 font-weight:bold; font-size: 115%;                                                '
-                                            >3</span>
+                                            >${mark}</span>
                                                                             </div>
                                                                                                         </td>
                     <td style='text-align:right'>
